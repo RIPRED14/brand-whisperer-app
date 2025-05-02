@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 195 30% 97%;
+    --foreground: 200 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 20% 15%;
+
+    --primary: 196 84% 29%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 189 72% 39%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 200 20% 92%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 196 30% 94%;
+    --accent-foreground: 196 84% 29%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 20% 90%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 196 84% 29%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 200 20% 15%;
+    --foreground: 210 40% 98%;
+
+    --card: 200 15% 20%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 200 15% 20%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 196 84% 29%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 189 72% 39%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 200 15% 25%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 200 15% 25%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 15% 30%;
+    --input: 200 15% 30%;
+    --ring: 196 84% 29%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-foreground;
+  }
+
+  .brand-shadow {
+    box-shadow: 0 4px 20px rgba(10, 106, 139, 0.1);
+  }
+}
+
+@layer components {
+  .btn-brand {
+    @apply bg-brand-primary text-white hover:bg-brand-dark transition-colors duration-200 py-2 px-4 rounded-md;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-1;
+  }
+}
